@@ -6,9 +6,9 @@ const app = electron.app;
 let tray = null;
 
 exports.create = win => {
-	if (process.platform === 'darwin' || tray) {
-		return;
-	}
+	// if (process.platform === 'darwin' || tray) {
+	// 	return;
+	// }
 
 	const iconPath = path.join(__dirname, 'static/IconTray.png');
 
@@ -42,9 +42,9 @@ exports.create = win => {
 };
 
 exports.setBadge = shouldDisplayUnread => {
-	if (process.platform === 'darwin' || !tray) {
-		return;
-	}
+	// if (process.platform === 'darwin' || !tray) {
+	// 	return;
+	// }
 
 	const icon = shouldDisplayUnread ? 'IconTrayUnread.png' : 'IconTray.png';
 	const iconPath = path.join(__dirname, `static/${icon}`);
