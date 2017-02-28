@@ -112,11 +112,11 @@ app.on('ready', () => {
 		page.insertCSS(fs.readFileSync(path.join(__dirname, 'browser.css'), 'utf8'));
 		page.insertCSS(fs.readFileSync(path.join(__dirname, 'dark-mode.css'), 'utf8'));
 		mainWindow.close();
-		if (argv.minimize) {
-			mainWindow.hide();
-		} else {
-			mainWindow.show();
-		}
+		if (process.platform === 'darwin') {
+				app.hide();
+			} else {
+				win.hide();
+			}
 	});
 
 	page.on('new-window', (e, url) => {
