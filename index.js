@@ -113,7 +113,7 @@ app.on('ready', () => {
 		page.insertCSS(fs.readFileSync(path.join(__dirname, 'dark-mode.css'), 'utf8'));
 		mainWindow.close();
 		if (argv.minimize) {
-			mainWindow.minimize();
+			mainWindow.hide();
 		} else {
 			mainWindow.show();
 		}
