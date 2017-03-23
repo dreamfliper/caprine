@@ -2,22 +2,22 @@ html {
 	overflow: hidden;
 }
 
-/* Add OS specific fonts */ 
+/* Add OS specific fonts */
 body {
 	font-family: -apple-system,
-			BlinkMacSystemFont, 
-			'Segoe UI', 
-			Roboto, 
-			Oxygen-Sans, 
-			Ubuntu, 
-			Cantarell, 
+			BlinkMacSystemFont,
+			'Segoe UI',
+			Roboto,
+			Oxygen-Sans,
+			Ubuntu,
+			Cantarell,
 			'Helvetica Neue',
 			sans-serif,
 			'Apple Color Emoji',
 			'Segoe UI Emoji',
 			'Segoe UI Symbol' !important;
 	text-rendering: optimizeLegibility !important;
-	font-feature-settings: 'liga', 'clig', 'dlig', 'kern';
+	font-feature-settings: 'liga', 'clig', 'kern';
 }
 
 /* Bind the toolbar as the window's draggable region */
@@ -110,4 +110,14 @@ body {
 a,
 *[role='button'] {
 	outline: none !important;
+}
+
+/* Remove white background in Preferences */
+._1u5d {
+	background-color: transparent !important;
+}
+
+/* Fix incorrect border radius in Preferences */
+._4eby {
+	border-radius: 2px !important;
 }
