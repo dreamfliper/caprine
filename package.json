@@ -58,12 +58,9 @@
     ],
     "appId": "com.sindresorhus.caprine",
     "mac": {
-(??)
       "category": "public.app-category.social-networking",
       "target": [
-        "dmg",
-        "zip",
-        "mas"
+        "zip"
       ]
     },
     "dmg": {
