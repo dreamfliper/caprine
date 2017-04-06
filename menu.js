@@ -122,7 +122,15 @@ const darwinTpl = [
 				type: 'separator'
 			},
 			{
-				label: 'Preferences…',
+				label: 'Bounce Dock on Message',
+				type: 'checkbox',
+				checked: config.get('bounceDockOnMessage'),
+				click() {
+					config.set('bounceDockOnMessage', !config.get('bounceDockOnMessage'));
+				}
+			},
+			{
+				label: 'Preferences...',
 				accelerator: 'Cmd+,',
 				click() {
 					sendAction('show-preferences');
@@ -201,36 +209,7 @@ const darwinTpl = [
 		]
 	},
 	{
-		label: 'Edit',
-		submenu: [
-			{
-				role: 'undo'
-			},
-			{
-				role: 'redo'
-			},
-			{
-				type: 'separator'
-			},
-			{
-				role: 'cut'
-			},
-			{
-				role: 'copy'
-			},
-			{
-				role: 'paste'
-			},
-			{
-				role: 'pasteandmatchstyle'
-			},
-			{
-				role: 'delete'
-			},
-			{
-				role: 'selectall'
-			}
-		]
+		role: 'editMenu'
 	},
 	{
 		label: 'View',
@@ -381,9 +360,6 @@ const otherTpl = [
 			},
 			{
 				role: 'paste'
-			},
-			{
-				role: 'pasteandmatchstyle'
 			},
 			{
 				role: 'delete'
