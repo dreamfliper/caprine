@@ -44,7 +44,7 @@ const viewSubmenu = [
 	},
 	{
 		label: 'Toggle Dark Mode',
-		accelerator: 'Cmd+D',
+		accelerator: 'CmdOrCtrl+D',
 		click() {
 			sendAction('toggle-dark-mode');
 		}
@@ -127,6 +127,22 @@ const darwinTpl = [
 				checked: config.get('bounceDockOnMessage'),
 				click() {
 					config.set('bounceDockOnMessage', !config.get('bounceDockOnMessage'));
+				}
+			},
+			{
+				type: 'checkbox',
+				label: 'Block Seen Indicator',
+				checked: config.get('block.chatSeen'),
+				click(item) {
+					config.set('block.chatSeen', item.checked);
+				}
+			},
+			{
+				type: 'checkbox',
+				label: 'Block Typing Indicator',
+				checked: config.get('block.typingIndicator'),
+				click(item) {
+					config.set('block.typingIndicator', item.checked);
 				}
 			},
 			{
@@ -317,10 +333,19 @@ const otherTpl = [
 				type: 'separator'
 			},
 			{
-				label: 'Toggle Dark Mode',
-				accelerator: 'Ctrl+D',
-				click() {
-					sendAction('toggle-dark-mode');
+				type: 'checkbox',
+				label: 'Block Seen Indicator',
+				checked: config.get('block.chatSeen'),
+				click(item) {
+					config.set('block.chatSeen', item.checked);
+				}
+			},
+			{
+				type: 'checkbox',
+				label: 'Block Typing Indicator',
+				checked: config.get('block.typingIndicator'),
+				click(item) {
+					config.set('block.typingIndicator', item.checked);
 				}
 			},
 			{
