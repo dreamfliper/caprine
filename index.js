@@ -2,6 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const electron = require('electron');
+const electronLocalShortcut = require('electron-localshortcut');
 const log = require('electron-log');
 const {autoUpdater} = require('electron-updater');
 const isDev = require('electron-is-dev');
@@ -19,6 +20,7 @@ require('electron-context-menu')();
 
 let mainWindow;
 let isQuitting = false;
+let prevMessageCount = 0;
 
 const isAlreadyRunning = app.makeSingleInstance(() => {
 	if (mainWindow) {
@@ -45,12 +47,30 @@ function updateBadge(title) {
 
 	if (process.platform === 'darwin' || process.platform === 'linux') {
 		app.setBadgeCount(messageCount);
+		if (process.platform === 'darwin' && config.get('bounceDockOnMessage') && prevMessageCount !== messageCount) {
+			app.dock.bounce('informational');
+			prevMessageCount = messageCount;
+		}
 	}
 
 	if (process.platform === 'linux' || process.platform === 'win32') {
 		tray.setBadge(messageCount);
 	}
+
+	if (process.platform === 'win32') {
+		if (messageCount === 0) {
+			mainWindow.setOverlayIcon(null, '');
+		} else {
+			// Delegate drawing of overlay icon to renderer process
+			mainWindow.webContents.send('render-overlay-icon', messageCount);
+		}
+	}
 }
+
+ipcMain.on('update-overlay-icon', (event, data, text) => {
+	const img = electron.nativeImage.createFromDataURL(data);
+	mainWindow.setOverlayIcon(img, text);
+});
 
 function enableHiresResources() {
 	const scaleFactor = Math.max(...electron.screen.getAllDisplays().map(x => x.scaleFactor));
@@ -79,6 +99,20 @@ function enableHiresResources() {
 	});
 }
 
+function setUpPrivacyBlocking() {
+	const ses = electron.session.defaultSession;
+	const filter = {urls: ['*://*.messenger.com/*typ.php*', '*://*.messenger.com/*change_read_status.php*']};
+	ses.webRequest.onBeforeRequest(filter, (details, callback) => {
+		let blocking = false;
+		if (details.url.includes('typ.php')) {
+			blocking = config.get('block.typingIndicator');
+		} else {
+			blocking = config.get('block.chatSeen');
+		}
+		callback({cancel: blocking});
+	});
+}
+
 function createMainWindow() {
 	const lastWindowState = config.get('lastWindowState');
 	const isDarkMode = config.get('darkMode');
@@ -97,13 +131,14 @@ function createMainWindow() {
 		titleBarStyle: 'hidden-inset',
 		autoHideMenuBar: true,
 		darkTheme: isDarkMode, // GTK+3
-		transparent: true,
 		webPreferences: {
 			preload: path.join(__dirname, 'browser.js'),
 			nodeIntegration: false,
 			plugins: true
 		}
 	});
+
+	setUpPrivacyBlocking();
 
 	if (process.platform === 'darwin') {
 		win.setSheetOffset(40);
@@ -148,6 +183,23 @@ app.on('ready', () => {
 
 	const argv = require('minimist')(process.argv.slice(1));
 
+	electronLocalShortcut.register(mainWindow, 'CmdOrCtrl+V', () => {
+		if (electron.clipboard.availableFormats().some(type => type.includes('image'))) {
+			electron.dialog.showMessageBox({
+				type: 'info',
+				buttons: ['Send', 'Cancel'],
+				message: 'Are you sure you want to send the image in the clipboard?',
+				icon: electron.clipboard.readImage()
+			}, resp => {
+				if (resp === 0) {
+					// User selected send
+					webContents.paste();
+				}
+			});
+		} else {
+			webContents.paste();
+		}
+	});
 
 	webContents.on('dom-ready', () => {
 		webContents.insertCSS(fs.readFileSync(path.join(__dirname, 'browser.css'), 'utf8'));
@@ -161,9 +213,17 @@ app.on('ready', () => {
 		}
 	});
 
-	webContents.on('new-window', (e, url) => {
+	webContents.on('new-window', (e, url, frameName, disposition, options) => {
 		e.preventDefault();
-		electron.shell.openExternal(url);
+		if (url === 'about:blank') {
+			if (frameName === 'Video Call') {  // Voice/video call popup
+				options.show = true;
+				options.titleBarStyle = 'default';
+				e.newGuest = new electron.BrowserWindow(options);
+			}
+		} else {
+			electron.shell.openExternal(url);
+		}
 	});
 });
 

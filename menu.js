@@ -44,7 +44,7 @@ const viewSubmenu = [
 	},
 	{
 		label: 'Toggle Dark Mode',
-		accelerator: 'Cmd+D',
+		accelerator: 'CmdOrCtrl+D',
 		click() {
 			sendAction('toggle-dark-mode');
 		}
@@ -122,7 +122,31 @@ const darwinTpl = [
 				type: 'separator'
 			},
 			{
-				label: 'Preferences…',
+				label: 'Bounce Dock on Message',
+				type: 'checkbox',
+				checked: config.get('bounceDockOnMessage'),
+				click() {
+					config.set('bounceDockOnMessage', !config.get('bounceDockOnMessage'));
+				}
+			},
+			{
+				type: 'checkbox',
+				label: 'Block Seen Indicator',
+				checked: config.get('block.chatSeen'),
+				click(item) {
+					config.set('block.chatSeen', item.checked);
+				}
+			},
+			{
+				type: 'checkbox',
+				label: 'Block Typing Indicator',
+				checked: config.get('block.typingIndicator'),
+				click(item) {
+					config.set('block.typingIndicator', item.checked);
+				}
+			},
+			{
+				label: 'Preferences...',
 				accelerator: 'Cmd+,',
 				click() {
 					sendAction('show-preferences');
@@ -201,36 +225,7 @@ const darwinTpl = [
 		]
 	},
 	{
-		label: 'Edit',
-		submenu: [
-			{
-				role: 'undo'
-			},
-			{
-				role: 'redo'
-			},
-			{
-				type: 'separator'
-			},
-			{
-				role: 'cut'
-			},
-			{
-				role: 'copy'
-			},
-			{
-				role: 'paste'
-			},
-			{
-				role: 'pasteandmatchstyle'
-			},
-			{
-				role: 'delete'
-			},
-			{
-				role: 'selectall'
-			}
-		]
+		role: 'editMenu'
 	},
 	{
 		label: 'View',
@@ -338,10 +333,19 @@ const otherTpl = [
 				type: 'separator'
 			},
 			{
-				label: 'Toggle Dark Mode',
-				accelerator: 'Ctrl+D',
-				click() {
-					sendAction('toggle-dark-mode');
+				type: 'checkbox',
+				label: 'Block Seen Indicator',
+				checked: config.get('block.chatSeen'),
+				click(item) {
+					config.set('block.chatSeen', item.checked);
+				}
+			},
+			{
+				type: 'checkbox',
+				label: 'Block Typing Indicator',
+				checked: config.get('block.typingIndicator'),
+				click(item) {
+					config.set('block.typingIndicator', item.checked);
 				}
 			},
 			{
@@ -381,9 +385,6 @@ const otherTpl = [
 			},
 			{
 				role: 'paste'
-			},
-			{
-				role: 'pasteandmatchstyle'
 			},
 			{
 				role: 'delete'

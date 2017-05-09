@@ -2,7 +2,7 @@
 
 > Unofficial Facebook Messenger app
 
-<br>  
+<br>
 
 <a href="https://github.com/sindresorhus/caprine/releases/latest">
 	<img src="media/screenshot.png" width="846">
@@ -17,7 +17,7 @@
 
 [**Download**](https://github.com/sindresorhus/caprine/releases/latest) the `.dmg` file.
 
-Or with [Cask](http://caskroom.io): `$ brew cask install caprine`
+Or with [Homebrew-Cask](https://caskroom.github.io): `$ brew cask install caprine`
 
 ### Linux
 
@@ -29,6 +29,7 @@ Or with [Cask](http://caskroom.io): `$ brew cask install caprine`
 
 [**Download**](https://github.com/sindresorhus/caprine/releases/latest) the `.exe` file.
 
+*For taskbar notification badges to work on Windows 10, you'll need to [enable it in Taskbar Settings](https://www.tenforums.com/tutorials/48186-taskbar-buttons-hide-show-badges-windows-10-a.html).*
 
 ## Features
 
@@ -70,6 +71,14 @@ Desktop notifications can be turned on in Preferences.
 ### Always on Top
 
 You can toggle whether Caprine stays on top of other windows in the `Window`/`View` menu or with <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>t</kbd>.
+
+### Hide last seen / typing indicator
+
+You can choose to prevent people from knowing when you've seen a message or are currently typing. Both options are available under the `Caprine`/`File` menu.
+
+### Image paste confirmation
+
+Confirmation before sending images from the clipboard, to prevent accidental copy-pastes.
 
 ### Keyboard shortcuts
 
@@ -116,6 +125,12 @@ $ np minor --no-publish
 Then edit the automatically created GitHub Releases draft, remove the `.pkg` file, and publish.
 
 
+## Maintainers
+
+- [Sindre Sorhus](https://sindresorhus.com)
+- [Aw Young Qingzhuo](https://github.com/veniversum)
+
+
 ## License
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT
