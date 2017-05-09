@@ -28,14 +28,12 @@ acorn-jsx@^3.0.0:
   dependencies:
     acorn "^3.0.4"
 
+(??)
 acorn@^3.0.4:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
 
-acorn@^5.0.1:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.0.3.tgz#c460df08491463f028ccb82eab3730bf01087b3d"
-
+(??)
 ajv-keywords@^1.0.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.5.1.tgz#314dd0a4b3368fad3dfcdc54ede6171b886daf3c"
@@ -51,9 +49,7 @@ ajv@^4.7.0, ajv@^4.9.1:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
 
-ajv@^5.0.4-beta.2:
-  version "5.0.4-beta.2"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.0.4-beta.2.tgz#2b1dbc09cbd69ee0797489894ab38d12c914e121"
+(??)
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
@@ -227,8 +223,7 @@ camelcase@^3.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
 camelcase@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
+(??)
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -425,7 +420,7 @@ debug@2.2.0:
   dependencies:
     ms "0.7.1"
 
-debug@2.6.3, debug@^2.1.1, debug@^2.1.3, debug@^2.2.0, debug@^2.6.0, debug@^2.6.3:
+(??)
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.3.tgz#0f7eb8c30965ec08c72accfa0130c8b79984141d"
   dependencies:
@@ -507,58 +502,47 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
 
-electron-builder-core@16.6.0:
-  version "16.6.0"
-  resolved "https://registry.yarnpkg.com/electron-builder-core/-/electron-builder-core-16.6.0.tgz#31b22b70bef78e7012355d3aaf25f7f69f9084f7"
+(??)
 
-electron-builder-http@16.6.0, electron-builder-http@~16.6.0:
-  version "16.6.0"
-  resolved "https://registry.yarnpkg.com/electron-builder-http/-/electron-builder-http-16.6.0.tgz#60676caf0f1d9daf385ce070b07eec49efb29f0f"
+(??)
   dependencies:
     debug "2.6.3"
     fs-extra-p "^4.1.0"
 
-electron-builder-util@16.6.0, electron-builder-util@~16.6.0:
-  version "16.6.0"
-  resolved "https://registry.yarnpkg.com/electron-builder-util/-/electron-builder-util-16.6.0.tgz#9a555c6e4e785e406a807abfd88aa1369665ac7d"
+(??)
   dependencies:
     "7zip-bin" "^2.0.4"
     bluebird-lst "^1.0.2"
     chalk "^1.1.3"
     debug "2.6.3"
-    electron-builder-http "~16.6.0"
+(??)
     fs-extra-p "^4.1.0"
     ini "^1.3.4"
     is-ci "^1.0.10"
     node-emoji "^1.5.1"
-    source-map-support "^0.4.14"
+(??)
     stat-mode "^0.2.2"
     tunnel-agent "^0.6.0"
 
-electron-builder@^16.6.1:
-  version "16.7.0"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-16.7.0.tgz#70027490a0c11c6ba013d92e2aba6fd4f4fe8a58"
+(??)
   dependencies:
     "7zip-bin" "^2.0.4"
-    ajv "^5.0.4-beta.2"
+(??)
     ajv-keywords "^2.0.1-beta.2"
     bluebird-lst "^1.0.2"
     chalk "^1.1.3"
     chromium-pickle-js "^0.2.0"
     cuint "^0.2.2"
-    electron-builder-core "16.6.0"
-    electron-builder-http "16.6.0"
-    electron-builder-util "16.6.0"
-    electron-download-tf "4.1.1"
+(??)
     electron-macos-sign "~1.6.0"
-    electron-publish "16.6.2"
+(??)
     fs-extra-p "^4.1.0"
-    hosted-git-info "^2.4.1"
+(??)
     is-ci "^1.0.10"
     isbinaryfile "^3.0.2"
     js-yaml "^3.8.2"
     minimatch "^3.0.3"
-    node-forge "^0.7.1"
+(??)
     normalize-package-data "^2.3.6"
     parse-color "^1.0.0"
     plist "^2.0.1"
@@ -589,24 +573,20 @@ electron-debug@^1.0.0:
     electron-localshortcut "^0.6.0"
 
 electron-dl@^1.0.0, electron-dl@^1.2.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/electron-dl/-/electron-dl-1.8.0.tgz#56652da55aafda4a70074f6313fdf7f941ec752a"
+(??)
   dependencies:
     pupa "^1.0.0"
     unused-filename "^0.1.0"
 
-electron-download-tf@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/electron-download-tf/-/electron-download-tf-4.1.1.tgz#127aaa6a10ccf598bc15ed6ae83390348ebb3b4b"
+(??)
   dependencies:
-    debug "^2.6.3"
-    fs-extra "^2.1.2"
+(??)
     minimist "^1.2.0"
     nugget "^2.0.1"
     path-exists "^3.0.0"
     rc "^1.1.7"
     semver "^5.3.0"
-    sumchecker "^2.0.2"
+(??)
 
 electron-download@^3.0.1:
   version "3.3.0"
@@ -630,9 +610,7 @@ electron-localshortcut@^0.6.0:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/electron-localshortcut/-/electron-localshortcut-0.6.1.tgz#c4e268c38a6e42f40de5618fc906d1ed608f11aa"
 
-electron-log@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-2.0.2.tgz#ea7c3d584da1e02df48e68f16fb750b61e3ab05b"
+(??)
 
 electron-macos-sign@~1.6.0:
   version "1.6.0"
@@ -644,31 +622,26 @@ electron-macos-sign@~1.6.0:
     isbinaryfile "^3.0.2"
     plist "^2.0.1"
 
-electron-publish@16.6.2:
-  version "16.6.2"
-  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-16.6.2.tgz#956699f04e5fa23bbe1129a596736c0f0ef956b3"
+(??)
   dependencies:
     bluebird-lst "^1.0.2"
     chalk "^1.1.3"
-    electron-builder-http "~16.6.0"
-    electron-builder-util "~16.6.0"
+(??)
     fs-extra-p "^4.1.0"
     mime "^1.3.4"
+(??)
 
 electron-updater@^1.3.2:
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-1.11.2.tgz#87afc623bd2a7d4345e7cc2329937221a85e0132"
+(??)
   dependencies:
     bluebird-lst "^1.0.2"
-    electron-builder-http "~16.6.0"
+(??)
     fs-extra-p "^4.1.0"
     js-yaml "^3.8.2"
     semver "^5.3.0"
     source-map-support "^0.4.14"
 
-electron@^1.6.5:
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-1.6.5.tgz#6408d738025bc34f7c0ce8ee8827539475680a99"
+(??)
   dependencies:
     electron-download "^3.0.1"
     extract-zip "^1.0.3"
@@ -829,8 +802,7 @@ eslint-plugin-promise@^3.4.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.5.0.tgz#78fbb6ffe047201627569e85a6c5373af2a68fca"
 
 eslint-plugin-unicorn@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-2.1.1.tgz#3e9294366799b715e16a6df89159495b68930cb3"
+(??)
   dependencies:
     lodash.camelcase "^4.1.1"
     lodash.kebabcase "^4.0.1"
@@ -839,8 +811,7 @@ eslint-plugin-unicorn@^2.1.0:
     req-all "^1.0.0"
 
 eslint@^3.18.0:
-  version "3.19.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.19.0.tgz#c8fc6201c7f40dd08941b87c085767386a679acc"
+(??)
   dependencies:
     babel-code-frame "^6.16.0"
     chalk "^1.1.3"
@@ -879,10 +850,9 @@ eslint@^3.18.0:
     user-home "^2.0.0"
 
 espree@^3.1.3, espree@^3.4.0:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-3.4.1.tgz#28a83ab4aaed71ed8fe0f5efe61b76a05c13c4d2"
+(??)
   dependencies:
-    acorn "^5.0.1"
+(??)
     acorn-jsx "^3.0.0"
 
 esprima@^3.1.1:
@@ -1046,7 +1016,7 @@ fs-extra@^0.30.0:
     path-is-absolute "^1.0.0"
     rimraf "^2.2.8"
 
-fs-extra@^2.1.2:
+(??)
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-2.1.2.tgz#046c70163cef9aad46b0e4a7fa467fb22d71de35"
   dependencies:
@@ -1116,8 +1086,7 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.0.5:
     path-is-absolute "^1.0.0"
 
 globals@^9.14.0:
-  version "9.17.0"
-  resolved "https://registry.yarnpkg.com/globals/-/globals-9.17.0.tgz#0c0ca696d9b9bb694d2e5470bd37777caad50286"
+(??)
 
 globby@^5.0.0:
   version "5.0.0"
@@ -1201,10 +1170,9 @@ hoek@2.x.x:
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
 home-path@^1.0.1:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/home-path/-/home-path-1.0.5.tgz#788b29815b12d53bacf575648476e6f9041d133f"
+(??)
 
-hosted-git-info@^2.1.4, hosted-git-info@^2.4.1:
+(??)
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.4.1.tgz#4b0445e41c004a8bd1337773a4ff790ca40318c8"
 
@@ -1264,8 +1232,7 @@ inquirer@^0.12.0:
     through "^2.3.6"
 
 interpret@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.2.tgz#f4f623f0bb7122f15f5717c8e254b8161b5c5b2d"
+(??)
 
 invert-kv@^1.0.0:
   version "1.0.0"
@@ -1450,8 +1417,7 @@ js-types@^1.0.0:
   resolved "https://registry.yarnpkg.com/js-types/-/js-types-1.0.0.tgz#d242e6494ed572ad3c92809fc8bed7f7687cbf03"
 
 js-yaml@^3.5.1, js-yaml@^3.8.2:
-  version "3.8.3"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.3.tgz#33a05ec481c850c8875929166fe1beb61c728766"
+(??)
   dependencies:
     argparse "^1.0.7"
     esprima "^3.1.1"
@@ -1504,10 +1470,9 @@ klaw@^1.0.0:
     graceful-fs "^4.1.9"
 
 latest-version@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-3.1.0.tgz#a205383fea322b33b5ae3b18abee0dc2f356ee15"
+(??)
   dependencies:
-    package-json "^4.0.0"
+(??)
 
 lazy-req@^2.0.0:
   version "2.0.0"
@@ -1655,13 +1620,13 @@ minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
-mkdirp@0.5.0, mkdirp@^0.5.0:
+(??)
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.0.tgz#1d73076a6df986cd9344e15e71fcc05a4c9abf12"
   dependencies:
     minimist "0.0.8"
 
-mkdirp@^0.5.1:
+(??)
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -1702,9 +1667,7 @@ node-emoji@^1.5.1:
   dependencies:
     string.prototype.codepointat "^0.2.0"
 
-node-forge@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.1.tgz#9da611ea08982f4b94206b3beb4cc9665f20c300"
+(??)
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.3.4, normalize-package-data@^2.3.6:
   version "2.3.6"
@@ -1804,9 +1767,7 @@ p-locate@^2.0.0:
   dependencies:
     p-limit "^1.1.0"
 
-package-json@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/package-json/-/package-json-4.0.0.tgz#f3c9dc8738f5b59304d54d2cfb3f91d08fdd7998"
+(??)
   dependencies:
     got "^6.7.1"
     registry-auth-token "^3.0.1"
@@ -1954,6 +1915,7 @@ process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
 
+(??)
 progress-stream@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/progress-stream/-/progress-stream-1.2.0.tgz#2cd3cfea33ba3a89c9c121ec3347abe9ab125f77"
@@ -1986,8 +1948,7 @@ qs@~6.4.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
 rc@^1.0.1, rc@^1.1.2, rc@^1.1.6, rc@^1.1.7:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.1.tgz#2e03e8e42ee450b8cb3dce65be1bf8974e1dfd95"
+(??)
   dependencies:
     deep-extend "~0.4.0"
     ini "~1.3.0"
@@ -2246,7 +2207,7 @@ sort-keys@^1.1.1, sort-keys@^1.1.2:
   dependencies:
     is-plain-obj "^1.0.0"
 
-source-map-support@^0.4.14:
+(??)
   version "0.4.14"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.14.tgz#9d4463772598b86271b4f523f6c1f4e02a7d6aef"
   dependencies:
@@ -2361,7 +2322,7 @@ sumchecker@^1.2.0:
     debug "^2.2.0"
     es6-promise "^4.0.5"
 
-sumchecker@^2.0.2:
+(??)
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/sumchecker/-/sumchecker-2.0.2.tgz#0f42c10e5d05da5d42eea3e56c3399a37d6c5b3e"
   dependencies:
@@ -2615,8 +2576,7 @@ xo-init@^0.5.0:
     write-pkg "^2.0.0"
 
 xo@*:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/xo/-/xo-0.19.0.tgz#ef757f0038c4a7a52e324c2ff89e97b59bb4637a"
+(??)
   dependencies:
     arrify "^1.0.0"
     debug "^2.2.0"
