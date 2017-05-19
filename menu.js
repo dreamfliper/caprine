@@ -111,7 +111,7 @@ if (process.platform === 'darwin') {
 	});
 }
 
-const darwinTpl = [
+const macosTpl = [
 	{
 		label: appName,
 		submenu: [
@@ -309,6 +309,30 @@ const otherTpl = [
 				type: 'separator'
 			},
 			{
+				label: 'Select Next Conversation',
+				accelerator: 'Ctrl+Tab',
+				click() {
+					sendAction('next-conversation');
+				}
+			},
+			{
+				label: 'Select Previous Conversation',
+				accelerator: 'Ctrl+Shift+Tab',
+				click() {
+					sendAction('previous-conversation');
+				}
+			},
+			{
+				label: 'Find Conversation',
+				accelerator: 'Ctrl+F',
+				click() {
+					sendAction('find');
+				}
+			},
+			{
+				type: 'separator'
+			},
+			{
 				label: 'Mute Conversation',
 				accelerator: 'Ctrl+Shift+M',
 				click() {
@@ -417,6 +441,6 @@ const otherTpl = [
 	}
 ];
 
-const tpl = process.platform === 'darwin' ? darwinTpl : otherTpl;
+const tpl = process.platform === 'darwin' ? macosTpl : otherTpl;
 
 module.exports = electron.Menu.buildFromTemplate(tpl);
