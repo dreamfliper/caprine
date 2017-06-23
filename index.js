@@ -1,6 +1,7 @@
 'use strict';
 const path = require('path');
 const fs = require('fs');
+const URL = require('url').URL;
 const electron = require('electron');
 const electronLocalShortcut = require('electron-localshortcut');
 const log = require('electron-log');
@@ -64,6 +65,10 @@ function updateBadge(title) {
 			// Delegate drawing of overlay icon to renderer process
 			mainWindow.webContents.send('render-overlay-icon', messageCount);
 		}
+
+		if (config.get('flashWindowOnMessage')) {
+			mainWindow.flashFrame(messageCount !== 0);
+		}
 	}
 }
 
@@ -113,6 +118,17 @@ function setUpPrivacyBlocking() {
 	});
 }
 
+function setUserLocale() {
+	const facebookLocales = require('facebook-locales');
+	const userLocale = facebookLocales.bestFacebookLocaleFor(app.getLocale());
+	const cookie = {
+		url: 'https://www.messenger.com/',
+		name: 'locale',
+		value: userLocale
+	};
+	electron.session.defaultSession.cookies.set(cookie, () => {});
+}
+
 function createMainWindow() {
 	const lastWindowState = config.get('lastWindowState');
 	const isDarkMode = config.get('darkMode');
@@ -137,7 +153,7 @@ function createMainWindow() {
 			plugins: true
 		}
 	});
-
+	setUserLocale();
 	setUpPrivacyBlocking();
 
 	if (process.platform === 'darwin') {
@@ -161,6 +177,13 @@ function createMainWindow() {
 	win.on('page-title-updated', (e, title) => {
 		e.preventDefault();
 		updateBadge(title);
+	});
+
+	win.on('focus', () => {
+		if (config.get('flashWindowOnMessage')) {
+			// This is a security in the case where messageCount is not reset by page title update
+			win.flashFrame(false);
+		}
 	});
 
 	return win;
@@ -222,6 +245,10 @@ app.on('ready', () => {
 				e.newGuest = new electron.BrowserWindow(options);
 			}
 		} else {
+			if (url.startsWith('https://l.messenger.com/l.php')) {
+				url = new URL(url).searchParams.get('u');
+			}
+
 			electron.shell.openExternal(url);
 		}
 	});

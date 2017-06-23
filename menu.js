@@ -43,6 +43,13 @@ const viewSubmenu = [
 		type: 'separator'
 	},
 	{
+		label: 'Toggle Sidebar',
+		accelerator: 'CmdOrCtrl+Shift+S',
+		click() {
+			sendAction('toggle-sidebar');
+		}
+	},
+	{
 		label: 'Toggle Dark Mode',
 		accelerator: 'CmdOrCtrl+D',
 		click() {
@@ -265,6 +272,13 @@ const macosTpl = [
 				}
 			},
 			{
+				label: 'Insert GIF',
+				accelerator: 'Cmd+G',
+				click() {
+					sendAction('insert-gif');
+				}
+			},
+			{
 				type: 'separator'
 			},
 			{
@@ -330,6 +344,13 @@ const otherTpl = [
 				}
 			},
 			{
+				label: 'Insert GIF',
+				accelerator: 'Ctrl+G',
+				click() {
+					sendAction('insert-gif');
+				}
+			},
+			{
 				type: 'separator'
 			},
 			{
@@ -355,6 +376,15 @@ const otherTpl = [
 			},
 			{
 				type: 'separator'
+			},
+			{
+				type: 'checkbox',
+				label: 'Flash Window on Message',
+				visible: process.platform === 'win32',
+				checked: config.get('flashWindowOnMessage'),
+				click(item) {
+					config.set('flashWindowOnMessage', item.checked);
+				}
 			},
 			{
 				type: 'checkbox',

@@ -32,6 +32,10 @@ ipc.on('find', () => {
 	document.querySelector('._58al').focus();
 });
 
+ipc.on('insert-gif', () => {
+	document.querySelector('._yht').click();
+});
+
 ipc.on('next-conversation', nextConversation);
 
 ipc.on('previous-conversation', previousConversation);
@@ -54,6 +58,16 @@ ipc.on('archive-conversation', () => {
 	window.setTimeout(() => {
 		document.querySelectorAll(archiveSelector)[1].click();
 	}, 10);
+});
+
+ipc.on('toggle-sidebar', () => {
+	const sidebar = document.querySelector('._1enh');
+	const display = sidebar.style.display;
+	sidebar.style.display = display === '' ? 'none' : '';
+
+	// Fix for left space in compact mode
+	const mainSelector = document.querySelector('._1q5-');
+	mainSelector.classList.toggle('sidebar-hidden');
 });
 
 function setDarkMode() {

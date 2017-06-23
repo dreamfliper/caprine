@@ -4,7 +4,7 @@
 
 Caprine is an unofficial and privacy focused Facebook Messenger app with many useful features.
 
-**[Discuss it on Product Hunt](https://www.producthunt.com/posts/caprine-2)**
+**[Website](https://sindresorhus.com/caprine)** &nbsp;&nbsp; **[Discuss it on Product Hunt](https://www.producthunt.com/posts/caprine-2)**
 
 <br>
 
@@ -28,6 +28,8 @@ Caprine is an unofficial and privacy focused Facebook Messenger app with many us
 ## Install
 
 *macOS 10.9+, Linux, and Windows 7+ are supported (64-bit only).*
+
+Download the latest version on the [website](https://sindresorhus.com/caprine) or below.
 
 ### macOS
 
@@ -67,6 +69,10 @@ On *macOS*, you can toggle the window vibrancy effect in the `View` menu.
 <img src="media/screenshot-block-typing-indicator.png" width="626">
 
 You can choose to prevent people from knowing when you've seen a message or are currently typing. Both options are available under the `Caprine`/`File` menu.
+
+### Prevents link tracking
+
+Links that you click on will not be tracked by Facebook.
 
 ### Jump to conversation hotkey
 
@@ -108,11 +114,13 @@ Toggle "Dark mode"     | <kbd>Cmd/Ctrl</kbd> <kbd>d</kbd>
 Next conversation      | <kbd>Cmd/Ctrl</kbd> <kbd>]</kbd> or <kbd>Ctrl</kbd> <kbd>Tab</kbd>
 Previous conversation  | <kbd>Cmd/Ctrl</kbd> <kbd>[</kbd> or <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd>
 Jump to conversation   | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd>…<kbd>9</kbd>
+Insert GIF             | <kbd>Cmd/Ctrl</kbd> <kbd>g</kbd>
 Mute conversation      | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>m</kbd>
 Archive conversation   | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>a</kbd>
 Delete conversation    | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>d</kbd>
 Toggle "Always on Top" | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>t</kbd>
 Toggle window menu     | <kbd>Alt</kbd> *(Windows only)*
+Toggle sidebar         | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>s</kbd>
 
 
 ---
