@@ -230,7 +230,7 @@ app.on('ready', () => {
 		webContents.insertCSS(fs.readFileSync(path.join(__dirname, 'vibrancy.css'), 'utf8'));
 
 		if (argv.minimize) {
-			mainWindow.hide();
+			mainWindow.close();
 		} else {
 			mainWindow.show();
 		}
