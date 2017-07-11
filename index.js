@@ -245,7 +245,7 @@ app.on('ready', () => {
 		}
 
 		if (argv.minimize) {
-			mainWindow.hide();
+			mainWindow.close();
 		} else {
 			mainWindow.show();
 		}
