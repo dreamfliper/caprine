@@ -4,7 +4,7 @@
 
 Caprine is an unofficial and privacy focused Facebook Messenger app with many useful features.
 
-**[Discuss it on Product Hunt](https://www.producthunt.com/posts/caprine-2)**
+**[Website](https://sindresorhus.com/caprine)** &nbsp;&nbsp; **[Discuss it on Product Hunt](https://www.producthunt.com/posts/caprine-2)**
 
 <br>
 
@@ -19,6 +19,7 @@ Caprine is an unofficial and privacy focused Facebook Messenger app with many us
 - [Vibrant theme](#vibrancy)*
 - [Privacy focused](#hide-last-seen--typing-indicator)
 - [Keyboard shortcuts](#keyboard-shortcuts)
+- [Work Chat support](#work-chat-support)
 - Cross-platform
 - Silent auto-updates
 - Custom text size
@@ -28,6 +29,8 @@ Caprine is an unofficial and privacy focused Facebook Messenger app with many us
 ## Install
 
 *macOS 10.9+, Linux, and Windows 7+ are supported (64-bit only).*
+
+Download the latest version on the [website](https://sindresorhus.com/caprine) or below.
 
 ### macOS
 
@@ -68,6 +71,10 @@ On *macOS*, you can toggle the window vibrancy effect in the `View` menu.
 
 You can choose to prevent people from knowing when you've seen a message or are currently typing. Both options are available under the `Caprine`/`File` menu.
 
+### Prevents link tracking
+
+Links that you click on will not be tracked by Facebook.
+
 ### Jump to conversation hotkey
 
 You can switch conversations similar to how you switch browser tabs: <kbd>Cmd/Ctrl</kbd> <kbd>n</kbd> (where `n` is `1` through `9`).
@@ -92,6 +99,12 @@ You can toggle whether Caprine stays on top of other windows in the `Window`/`Vi
 
 Confirmation before sending images from the clipboard, to prevent accidental copy-pastes.
 
+### Work Chat support
+
+Support for Work Chat: Messenger for [Workplace](https://www.facebook.com/workplace). You can switch to it in the `Caprine`/`File` menu.
+
+<div align="center"><img src="media/screenshot-work-chat.png" width="788"></div>
+
 ### Background behavior
 
 When closing the window, the app will continue running in the background, in the dock on macOS and the tray on Linux/Windows. Right-click the dock/tray icon and choose `Quit` to completely quit the app. On macOS, click the dock icon to show the window. On Linux, right-click the tray icon and choose `Toggle` to toggle the window. On Windows, click the tray icon to toggle the window.
@@ -108,11 +121,13 @@ Toggle "Dark mode"     | <kbd>Cmd/Ctrl</kbd> <kbd>d</kbd>
 Next conversation      | <kbd>Cmd/Ctrl</kbd> <kbd>]</kbd> or <kbd>Ctrl</kbd> <kbd>Tab</kbd>
 Previous conversation  | <kbd>Cmd/Ctrl</kbd> <kbd>[</kbd> or <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd>
 Jump to conversation   | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd>…<kbd>9</kbd>
+Insert GIF             | <kbd>Cmd/Ctrl</kbd> <kbd>g</kbd>
 Mute conversation      | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>m</kbd>
 Archive conversation   | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>a</kbd>
 Delete conversation    | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>d</kbd>
 Toggle "Always on Top" | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>t</kbd>
 Toggle window menu     | <kbd>Alt</kbd> *(Windows only)*
+Toggle sidebar         | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>s</kbd>
 
 
 ---

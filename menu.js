@@ -43,6 +43,13 @@ const viewSubmenu = [
 		type: 'separator'
 	},
 	{
+		label: 'Toggle Sidebar',
+		accelerator: 'CmdOrCtrl+Shift+S',
+		click() {
+			sendAction('toggle-sidebar');
+		}
+	},
+	{
 		label: 'Toggle Dark Mode',
 		accelerator: 'CmdOrCtrl+D',
 		click() {
@@ -156,6 +163,24 @@ const macosTpl = [
 				type: 'separator'
 			},
 			{
+				label: 'Switch to Work Chat…',
+				visible: !config.get('useWorkChat'),
+				click() {
+					config.set('useWorkChat', true);
+					app.relaunch();
+					app.quit();
+				}
+			},
+			{
+				label: 'Switch to Messenger…',
+				visible: config.get('useWorkChat'),
+				click() {
+					config.set('useWorkChat', false);
+					app.relaunch();
+					app.quit();
+				}
+			},
+			{
 				label: 'Log Out',
 				click() {
 					sendAction('log-out');
@@ -265,6 +290,13 @@ const macosTpl = [
 				}
 			},
 			{
+				label: 'Insert GIF',
+				accelerator: 'Cmd+G',
+				click() {
+					sendAction('insert-gif');
+				}
+			},
+			{
 				type: 'separator'
 			},
 			{
@@ -330,6 +362,13 @@ const otherTpl = [
 				}
 			},
 			{
+				label: 'Insert GIF',
+				accelerator: 'Ctrl+G',
+				click() {
+					sendAction('insert-gif');
+				}
+			},
+			{
 				type: 'separator'
 			},
 			{
@@ -358,6 +397,15 @@ const otherTpl = [
 			},
 			{
 				type: 'checkbox',
+				label: 'Flash Window on Message',
+				visible: process.platform === 'win32',
+				checked: config.get('flashWindowOnMessage'),
+				click(item) {
+					config.set('flashWindowOnMessage', item.checked);
+				}
+			},
+			{
+				type: 'checkbox',
 				label: 'Block Seen Indicator',
 				checked: config.get('block.chatSeen'),
 				click(item) {
@@ -374,6 +422,24 @@ const otherTpl = [
 			},
 			{
 				type: 'separator'
+			},
+			{
+				label: 'Switch to Work Chat…',
+				visible: !config.get('useWorkChat'),
+				click() {
+					config.set('useWorkChat', true);
+					app.relaunch();
+					app.quit();
+				}
+			},
+			{
+				label: 'Switch to Messenger…',
+				visible: config.get('useWorkChat'),
+				click() {
+					config.set('useWorkChat', false);
+					app.relaunch();
+					app.quit();
+				}
 			},
 			{
 				label: 'Log Out',
