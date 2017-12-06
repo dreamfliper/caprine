@@ -28,8 +28,8 @@ let prevMessageCount = 0;
 
 const isAlreadyRunning = app.makeSingleInstance(() => {
 	if (mainWindow) {
-		if (mainWindow.isMinimized()) {
-			mainWindow.restore();
+		if (argv.minimize) {
+			mainWindow.close();
 		}
 
 		mainWindow.show();
@@ -218,8 +218,6 @@ app.on('ready', () => {
 	enableHiresResources();
 
 	const {webContents} = mainWindow;
-
-	const argv = require('minimist')(process.argv.slice(1));
 
 	// Disabled because of #258
 	// electronLocalShortcut.register(mainWindow, 'CmdOrCtrl+V', () => {
