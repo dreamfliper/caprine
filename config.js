@@ -13,12 +13,14 @@ module.exports = new Store({
 		alwaysOnTop: false,
 		bounceDockOnMessage: false,
 		showUnreadBadge: true,
+		launchMinimized: false,
 		flashWindowOnMessage: true,
 		block: {
 			chatSeen: false,
 			typingIndicator: false
 		},
 		confirmImagePaste: true,
-		useWorkChat: false
+		useWorkChat: false,
+		sidebarHidden: false
 	}
 });

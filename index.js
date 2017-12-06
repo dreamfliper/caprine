@@ -253,8 +253,8 @@ app.on('ready', () => {
 			webContents.insertCSS(fs.readFileSync(path.join(__dirname, 'workchat.css'), 'utf8'));
 		}
 
-		if (argv.minimize) {
-			mainWindow.close();
+		if (config.get('launchMinimized')) {
+			mainWindow.minimize();
 		} else {
 			mainWindow.show();
 		}
